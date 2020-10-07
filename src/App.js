@@ -2,7 +2,7 @@ import React, { useState, useEffect} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { API } from 'aws-amplify';
-import GitHubBornOn from './GutHubBornOn';
+import GitHubBornOn from './GitHubBornOn';
 
 const App = () => {
 
@@ -88,9 +88,9 @@ const App = () => {
         ))
       }
     </div>
-  );
   <GitHubBornOn />
   </>
+  );
 }
 
 export default App;
