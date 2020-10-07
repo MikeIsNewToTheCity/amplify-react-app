@@ -45,10 +45,23 @@ app.get(
 
   axios.get(apiUrl)
     .then(response => {
-      res.json({ coins: response.data.data })
+      res.json({ coins: response.data.data });
     })
-    .catch(err => res.json({ error: err }))
+    .catch(err => res.json({ error: err }));
 });
+
+app.get(
+  '/born'
+  , (req, res) => {
+
+    axios.get('https://api.github.com/users/mikeisnewtothecity')
+    .then(response => {
+      res.json({ bornInfo: response.data });
+    })
+    .catch(err => res.json({ error: err }));
+
+  }
+);
 
 app.get('/item', function(req, res) {
   // Add your code here
