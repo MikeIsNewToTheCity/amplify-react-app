@@ -11,8 +11,8 @@ const GitHubBornOn = () => {
         const data = await API.get('cryptoapi','/born');
         
         setDate({
-            user: data.borninfo.login
-            , birthDate: data.borninfo.created_at
+            user: data.bornInfo.login
+            , birthDate: data.bornInfo.created_at
         });
     };
 
